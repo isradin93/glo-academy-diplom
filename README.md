@@ -1,2 +1,2 @@
-# glo-academy-diplom
+# Glo-academy-diplom
 ## Electrician website template
