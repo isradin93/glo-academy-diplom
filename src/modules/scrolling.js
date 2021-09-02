@@ -1,13 +1,26 @@
-const scrolling = () => {
+const scrolling = upSelector => {
+    const upElem = document.querySelector(upSelector);
+
+    window.addEventListener('scroll', () => {
+        if (document.documentElement.scrollTop > 550) {
+            upElem.classList.add('animated', 'fadeIn');
+            upElem.classList.remove('fadeOut');
+        } else {
+            upElem.classList.add('fadeOut');
+            upElem.classList.remove('fadeIn');
+        }
+    });
+
+    // Scrolling with raf
 
     const links = document.querySelectorAll('[href^="#"]'),
-        speed = 0.6;
+        speed = 0.5;
 
     links.forEach(link => {
         link.addEventListener('click', function(event) {
             event.preventDefault();
 
-            const hightTop = document.documentElement.scrollTop,
+            const heightTop = document.documentElement.scrollTop,
                 hash = this.hash,
                 toBlock = document.querySelector(hash).getBoundingClientRect().top;
             let start = null;
@@ -18,12 +31,12 @@ const scrolling = () => {
                 }
 
                 const progress = time - start,
-                    r = (toBlock < 0 ? Math.max(hightTop - progress / speed, hightTop + toBlock) :
-                        Math.min(hightTop + progress / speed, hightTop + toBlock));
+                    r = (toBlock < 0 ? Math.max(heightTop - progress / speed, heightTop + toBlock) :
+                        Math.min(heightTop + progress / speed, heightTop + toBlock));
 
                 document.documentElement.scrollTo(0, r);
 
-                if (r !== hightTop + toBlock) {
+                if (r !== heightTop + toBlock) {
                     requestAnimationFrame(step);
                 } else {
                     location.hash = hash;
