@@ -5,6 +5,7 @@ import feedbackModal from "./modules/feedbackModal";
 import sliderCarousel from "./modules/sliderCarousel";
 import autoSlider from "./modules/autoSlider";
 import accordion from "./modules/accordion";
+import sendForms from "./modules/sendForms";
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,4 +16,5 @@ window.addEventListener('DOMContentLoaded', () => {
     sliderCarousel();
     autoSlider();
     accordion();
+    sendForms();
 });
