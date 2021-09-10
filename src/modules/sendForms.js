@@ -1,4 +1,4 @@
-const sendForm = () => {
+const sendForms = () => {
     const errorMsg = 'Что-то пошло не так',
         successMsg = 'Спасибо! Мы свяжимся с вами в ближайшее время',
         responseWindow = document.getElementById('responseMessage'),
@@ -93,4 +93,4 @@ const sendForm = () => {
     });
 };
 
-export default sendForm;
+export default sendForms;
