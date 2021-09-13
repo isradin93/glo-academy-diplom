@@ -1,3 +1,4 @@
+import "@babel/polyfill";
 import scrolling from "./modules/scrolling";
 import aboutCompanyCounter from "./modules/aboutCompanyCounter";
 import callbackModal from "./modules/callbackModal";

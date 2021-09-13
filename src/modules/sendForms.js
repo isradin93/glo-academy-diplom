@@ -62,7 +62,7 @@ const sendForms = () => {
         };
 
         const responseHandler = async() => {
-            const response = await fetch('./server.php', {
+            const response = await fetch('./server1.php', {
                 method: 'POST',
                 body: JSON.stringify(body)
             });
