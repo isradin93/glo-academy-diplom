@@ -2,6 +2,10 @@
 
 ## Electrician website template
 
+## Live Demo
+
+Quick preview: <https://isradin93.github.io/glo-academy-diplom/>
+
  For project:
 
  1. `npm i` in root folder
