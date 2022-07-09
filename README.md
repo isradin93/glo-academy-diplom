@@ -1,6 +1,4 @@
-# Glo-academy-diploma
-
-## Electrician website template
+# Electrician website 
 
 ## Live Demo
 
